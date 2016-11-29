@@ -1,34 +1,34 @@
 <?php
 //
 //if (!function_exists('__')) {
-//    /**
-//     * Translate a formatted string based on printf formats
-//     * Can be use an array on args or use the number of the arguments
-//     *
-//     * @param  string $message the message to translate
-//     * @param  array|mixed $args the tokens values used inside the $message
-//     * @return string the message translated and formatted
-//     */
-//    function __($message, $args = null)
-//    {
-//        $translator = App::make('laravel-gettext');
-//        $translation = $translator->translate($message);
-//
-//        if (strlen($translation)) {
-//            if (!empty($args) && !is_array($args)) {
-//                $args = array_slice(func_get_args(), 1);
-//            }
-//            $translation = vsprintf($translation, $args);
-//            return $translation;
-//        }
-//
-//        /**
-//         * If translations are missing returns
-//         * the original message.
-//         * @see https://github.com/symfony/symfony/issues/13483
-//         */
-//        return $message;
-//    }
+    /**
+     * Translate a formatted string based on printf formats
+     * Can be use an array on args or use the number of the arguments
+     *
+     * @param  string $message the message to translate
+     * @param  array|mixed $args the tokens values used inside the $message
+     * @return string the message translated and formatted
+     */
+    function _t($message, $args = null)
+    {
+        $translator = App::make('laravel-gettext');
+        $translation = $translator->translate($message);
+
+        if (strlen($translation)) {
+            if (!empty($args) && !is_array($args)) {
+                $args = array_slice(func_get_args(), 1);
+            }
+            $translation = vsprintf($translation, $args);
+            return $translation;
+        }
+
+        /**
+         * If translations are missing returns
+         * the original message.
+         * @see https://github.com/symfony/symfony/issues/13483
+         */
+        return $message;
+    }
 //}
 //
 //if (!function_exists('_')) {
