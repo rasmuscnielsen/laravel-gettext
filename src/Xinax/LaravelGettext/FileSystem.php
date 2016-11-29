@@ -56,7 +56,7 @@ class FileSystem
         $this->basePath = $basePath;
 
         $this->storagePath = $storagePath;
-        $this->storageContainer = "framework";
+        $this->storageContainer = "app/translations";
         $this->folderName = 'i18n';
     }
 
