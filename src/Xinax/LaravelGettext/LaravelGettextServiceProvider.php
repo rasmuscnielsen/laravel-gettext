@@ -84,7 +84,7 @@ class LaravelGettextServiceProvider extends ServiceProvider
             );
         });
 
-        $this->registerCommands();
+//        $this->registerCommands();
     }
 
     /**
