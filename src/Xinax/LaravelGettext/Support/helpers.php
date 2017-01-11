@@ -15,10 +15,10 @@
         $translation = $translator->translate($message);
 
         if (strlen($translation)) {
-            if (!empty($args) && !is_array($args)) {
-                $args = array_slice(func_get_args(), 1);
-            }
-            $translation = vsprintf($translation, $args);
+//            if (!empty($args) && !is_array($args)) {
+//                $args = array_slice(func_get_args(), 1);
+//            }
+//            $translation = vsprintf($translation, $args);
             return $translation;
         }
 
